@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Auto Detailing</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* You can customize your Tailwind config here */
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-blue-800 text-white p-4">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-2xl font-bold">Elite Auto Detailing</div>
+      <ul class="flex space-x-6">
+        <li><a href="#services" class="hover:text-gray-300">Services</a></li>
+        <li><a href="#about" class="hover:text-gray-300">About</a></li>
+        <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-screen text-white relative"
+    style="background-image: url('https://example.com/car-detailing-hero.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <div class="text-center px-4">
+        <h1 class="text-5xl font-extrabold">Premium Auto Detailing</h1>
+        <p class="mt-4 text-xl">We bring your car back to life with professional detailing services.</p>
+        <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+      <!-- Service 1 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+        <img src="https://example.com/service1.jpg" alt="Exterior Detailing" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-xl font-semibold mt-4">Exterior Detailing</h3>
+        <p class="mt-2 text-gray-600">Get your car's exterior spotless with our thorough wash, waxing, and polishing.</p>
+      </div>
+      <!-- Service 2 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+        <img src="https://example.com/service2.jpg" alt="Interior Detailing" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-xl font-semibold mt-4">Interior Detailing</h3>
+        <p class="mt-2 text-gray-600">We clean every corner of your car’s interior, including upholstery, carpets, and dashboard.</p>
+      </div>
+      <!-- Service 3 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+        <img src="https://example.com/service3.jpg" alt="Engine Detailing" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-xl font-semibold mt-4">Engine Detailing</h3>
+        <p class="mt-2 text-gray-600">We carefully clean your engine bay to improve performance and appearance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-200 text-center">
+    <h2 class="text-3xl font-bold mb-8">About Us</h2>
+    <p class="text-lg text-gray-600 max-w-4xl mx-auto">Elite Auto Detailing offers professional detailing services with an emphasis on quality and attention to detail. We use top-notch products and techniques to restore your vehicle to showroom condition. Whether you're looking for a quick clean or a full-service detail, we have you covered.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
+    <p class="text-lg text-gray-600 mb-6">Contact us for more information or to book an appointment.</p>
+    <form action="https://getform.io/f/your-form-id" method="POST" class="max-w-xl mx-auto">
+      <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-lg" required>
+      <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-lg" required>
+      <textarea name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-lg" required></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white py-4 text-center">
+    <p>&copy; 2025 Elite Auto Detailing. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
