@@ -402,6 +402,12 @@
       bookNow: "Book Now",
       servicesBtn: "Our Services",
       servicesTitle: "Our Services",
+      service1Title: "Custom Website Design",
+      service1Desc: "Tailored websites that fit your brand and business needs.",
+      service2Title: "Responsive Mobile-Friendly Sites",
+      service2Desc: "Websites that look great on all devices, from phones to desktops.",
+      service3Title: "SEO & Performance Optimization",
+      service3Desc: "Improve your site’s visibility and speed to attract more visitors.",
       aboutTitle: "About CesarsWebs",
       aboutSub: "Helping Local Businesses Shine Online",
       aboutDesc: "We're two friends, both named Cesar, based in Elgin, IL, where we work in the city's IT department. With a shared passion for technology and design, we created CesarsWebs to help small businesses grow and stand out in today's digital world. We know how important a strong online presence is, especially for local businesses. That's why we focus on building clean, professional websites that are easy to use and built to impress. Whether you're just starting out or looking to modernize your current site, we're here to make the process simple, affordable, and effective. Let's bring your business online the right way.",
@@ -422,6 +428,12 @@
       bookNow: "Agenda Ahora",
       servicesBtn: "Nuestros Servicios",
       servicesTitle: "Nuestros Servicios",
+      service1Title: "Diseño Web Personalizado",
+      service1Desc: "Sitios web adaptados a tu marca y las necesidades de tu negocio.",
+      service2Title: "Sitios Responsivos y Adaptables",
+      service2Desc: "Páginas que se ven increíbles en todos los dispositivos, desde teléfonos hasta computadoras.",
+      service3Title: "Optimización SEO y Rendimiento",
+      service3Desc: "Mejora la visibilidad y velocidad de tu sitio para atraer más visitantes.",
       aboutTitle: "Sobre CesarsWebs",
       aboutSub: "Ayudando a los Negocios Locales a Brillar en Línea",
       aboutDesc: "Somos dos amigos, ambos llamados Cesar, con sede en Elgin, IL, donde trabajamos en el departamento de TI de la ciudad. Con una pasión compartida por la tecnología y el diseño, creamos CesarsWebs para ayudar a las pequeñas empresas a crecer y destacarse en el mundo digital. Sabemos lo importante que es una fuerte presencia en línea, especialmente para los negocios locales. Por eso, nos enfocamos en construir sitios web limpios, profesionales, fáciles de usar y listos para impresionar. Ya sea que estés comenzando o quieras modernizar tu sitio actual, estamos aquí para hacerlo simple, accesible y efectivo. Llevemos tu negocio en línea de la mejor manera.",
@@ -445,28 +457,46 @@
     const lang = spanish ? "es" : "en";
     const t = translations[lang];
 
+    // Hero section
     document.querySelector(".hero-title").innerHTML = t.homeTitle;
     document.querySelector(".hero-subtext").innerHTML = t.homeSub;
     document.querySelector(".btn-success").innerHTML = t.bookNow;
     document.querySelector(".secondary-btn").innerHTML = t.servicesBtn;
+
+    // Services
     document.querySelector(".services-title").innerHTML = t.servicesTitle;
+    const serviceTitles = document.querySelectorAll(".service-title");
+    const serviceDescs = document.querySelectorAll(".service-description");
+    serviceTitles[0].innerHTML = t.service1Title;
+    serviceDescs[0].innerHTML = t.service1Desc;
+    serviceTitles[1].innerHTML = t.service2Title;
+    serviceDescs[1].innerHTML = t.service2Desc;
+    serviceTitles[2].innerHTML = t.service3Title;
+    serviceDescs[2].innerHTML = t.service3Desc;
+
+    // About section
     document.querySelector(".about-title").innerHTML = t.aboutTitle;
     document.querySelector(".about-subtitle").innerHTML = t.aboutSub;
     document.querySelector(".about-description").innerHTML = t.aboutDesc;
     document.querySelector(".about-signature").innerHTML = t.aboutSig;
+
+    // Contact
     document.querySelector(".contact-title").innerHTML = t.contactTitle;
 
+    // Navbar
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
     navLinks[0].innerText = t.navbarHome;
     navLinks[1].innerText = t.navbarServices;
     navLinks[2].innerText = t.navbarAbout;
     navLinks[3].innerText = t.navbarContact;
 
+    // Form
     document.querySelector('input[name="name"]').placeholder = t.formName;
     document.querySelector('input[name="email"]').placeholder = t.formEmail;
     document.querySelector('textarea[name="message"]').placeholder = t.formMessage;
     document.querySelector('.contact-form button').innerText = t.formButton;
 
+    // Button toggle text
     document.getElementById("modeToggle").innerText = spanish ? "English" : "Español";
   });
 </script>
