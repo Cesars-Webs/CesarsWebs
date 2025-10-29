@@ -96,7 +96,7 @@
     .hero-left {
       flex: 1 1 100%;
       max-width: 100%;
-      text-align: center;
+      text-align: center; /* ✅ Center hero text & buttons */
     }
 
     .hero-right {
@@ -123,7 +123,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      justify-content: center;
+      justify-content: center; /* ✅ Center both buttons */
+      margin-top: 20px;
     }
 
     .hero-right img {
@@ -206,6 +207,16 @@
       background-color: #222;
       color: #fff;
     }
+  
+  .btn-success {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;      /* Match .secondary-btn */
+    border-radius: 6px;      /* Match rounded corners */
+    line-height: 1.5;        /* Keep text vertically centered */
+    vertical-align: middle;  /* Ensures perfect alignment with Our Services */
+  }
 
     #about {
       display: flex;
@@ -434,7 +445,6 @@
     const lang = spanish ? "es" : "en";
     const t = translations[lang];
 
-    // Hero & About
     document.querySelector(".hero-title").innerHTML = t.homeTitle;
     document.querySelector(".hero-subtext").innerHTML = t.homeSub;
     document.querySelector(".btn-success").innerHTML = t.bookNow;
@@ -446,24 +456,20 @@
     document.querySelector(".about-signature").innerHTML = t.aboutSig;
     document.querySelector(".contact-title").innerHTML = t.contactTitle;
 
-    // Navbar
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
     navLinks[0].innerText = t.navbarHome;
     navLinks[1].innerText = t.navbarServices;
     navLinks[2].innerText = t.navbarAbout;
     navLinks[3].innerText = t.navbarContact;
 
-    // Contact form placeholders and button
     document.querySelector('input[name="name"]').placeholder = t.formName;
     document.querySelector('input[name="email"]').placeholder = t.formEmail;
     document.querySelector('textarea[name="message"]').placeholder = t.formMessage;
     document.querySelector('.contact-form button').innerText = t.formButton;
 
-    // Toggle button text
     document.getElementById("modeToggle").innerText = spanish ? "English" : "Español";
   });
 </script>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
